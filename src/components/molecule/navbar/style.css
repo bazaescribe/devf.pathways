@@ -1,0 +1,20 @@
+/* Original navbar style */
+nav {
+  background: none;
+  transition: all 0.3s ease-in-out;
+  position: sticky;
+  width: 100%;
+  top: 0px;
+  box-sizing: border-box;
+  padding: 24px 0px;
+  z-index: 100;
+}
+
+/* Shrink class */
+.shrink {
+  background: black;
+  backdrop-filter: blur(80px);
+  padding-top: 0.75rem; /* Half of original */
+  padding-bottom: 0.75rem; /* Half of original */
+  box-shadow: 0px 4px 64px 12px rgba(0, 0, 0, 0.16);
+}

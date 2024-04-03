@@ -1,95 +1,176 @@
+'use client'
+
 import Image from "next/image";
-import styles from "./page.module.css";
+import Button from '@/components/atom/button/'
+import Navbar from '@/components/molecule/navbar'
+import BannerInfo from '@/components/molecule/bannerInfo'
+import Footer from "@/components/molecule/footer";
+import ParallaxComponent from "@/components/atom/parallaxComponent"
+import HeaderPhoto from "@/components/organism/headerPhoto"
+import HeaderForm from "@/components/organism/headerForm";
 
 export default function Home() {
   return (
-    <main className={styles.main}>
-      <div className={styles.description}>
-        <p>
-          Get started by editing&nbsp;
-          <code className={styles.code}>src/app/page.tsx</code>
-        </p>
-        <div>
-          <a
-            href="https://vercel.com?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            By{" "}
-            <Image
-              src="/vercel.svg"
-              alt="Vercel Logo"
-              className={styles.vercelLogo}
-              width={100}
-              height={24}
-              priority
-            />
-          </a>
-        </div>
-      </div>
+    <main>
+      <Navbar></Navbar>
 
-      <div className={styles.center}>
-        <Image
-          className={styles.logo}
-          src="/next.svg"
-          alt="Next.js Logo"
-          width={180}
-          height={37}
-          priority
-        />
-      </div>
+      <HeaderPhoto></HeaderPhoto>
 
-      <div className={styles.grid}>
-        <a
-          href="https://nextjs.org/docs?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-          className={styles.card}
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <h2>
-            Docs <span>-&gt;</span>
-          </h2>
-          <p>Find in-depth information about Next.js features and API.</p>
-        </a>
+      {/* <HeaderForm></HeaderForm> */}
 
-        <a
-          href="https://nextjs.org/learn?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-          className={styles.card}
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <h2>
-            Learn <span>-&gt;</span>
-          </h2>
-          <p>Learn about Next.js in an interactive course with&nbsp;quizzes!</p>
-        </a>
+      <main className="container d-flex flex-direction-column gap-300">
+        <section className="row">
+          <BannerInfo></BannerInfo>
+        </section>
 
-        <a
-          href="https://vercel.com/templates?framework=next.js&utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-          className={styles.card}
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <h2>
-            Templates <span>-&gt;</span>
-          </h2>
-          <p>Explore starter templates for Next.js.</p>
-        </a>
+        <section>
+          <div className="card padded">
+            <h3>
+              Únete a una comunidad de más de 15,000 estudiantes
+            </h3>
+            <p>
+              Desde 2015, en dev.f hemos capacitado a miles de personas en más de 30 países, generando miles de empleos y un incalculable beneficio para la región. ¡Únete ahora!
+            </p>
+          </div>
+        </section>
 
-        <a
-          href="https://vercel.com/new?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-          className={styles.card}
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <h2>
-            Deploy <span>-&gt;</span>
-          </h2>
-          <p>
-            Instantly deploy your Next.js site to a shareable URL with Vercel.
-          </p>
-        </a>
-      </div>
+        <section className="padded">
+          <article>
+            <h3 className="mb-150">
+              ¿Por qué aprender con dev.f?
+            </h3>
+            
+            <div className="d-flex flex-wrap gap-075">
+              <div className="keypoint">
+                <h4>💼</h4>
+                <p className="bold">Job board</p>
+                <p>
+                  Connect with hundreds of companies looking for people like you.
+                </p>
+              </div>
+              <div className="keypoint">
+                <h4>⭐️</h4>
+                <p className="bold">Money back warranty</p>
+                <p>
+                  If you can’t find a tech job after completing the program you receive your money back. Learn more...
+                </p>
+              </div>
+              <div className="keypoint">
+                <h4>🧱</h4>
+                <p className="bold">Learn by building</p>
+                <p>
+                  Our program focus heavily on building real tech solutions that prepare you to the real deal.
+                </p>
+              </div>
+              <div className="keypoint">
+                <h4>🔴</h4>
+                <p className="bold">Live sesions</p>
+                <p>
+                  We know it’s hard to learn by your own, you’ll have a teacher all along your course to guide you through your journey.
+                </p>
+              </div>
+              <div className="keypoint">
+                <h4>🌎</h4>
+                <p className="bold">Remote learning</p>
+                <p>
+                From your house, the beach or your favourite coffee shop, join the classes wherever you are.
+                </p>
+              </div>
+              <div className="keypoint">
+                <h4>📺</h4>
+                <p className="bold">Review your classes as much as you want</p>
+                <p>
+                  No matter if you missed a session or didn’t quite catch the lecture, you can always go back to the class recording.
+                </p>
+              </div>
+              <div className="keypoint">
+                <h4>👾</h4>
+                <p className="bold">Online Campus</p>
+                <p>
+                  We have thousands of hours of additional content and elective classes to complement your course.
+                </p>
+              </div>
+              <div className="keypoint">
+                <h4>🙋‍♀️</h4>
+                <p className="bold">Join the community</p>
+                <p>
+                  Connect with thousands of tech students in more than 30 countries.
+                </p>
+              </div>
+            </div>
+          </article>
+
+          <article>
+            <h3 className="mb-150">
+              ¿Por qué aprender con dev.f?
+            </h3>
+            
+            <div className="d-flex flex-wrap gap-075">
+              <div className="keypoint">
+                <h4>💼</h4>
+                <p className="bold">Job board</p>
+                <p>
+                  Connect with hundreds of companies looking for people like you.
+                </p>
+              </div>
+              <div className="keypoint">
+                <h4>⭐️</h4>
+                <p className="bold">Money back warranty</p>
+                <p>
+                  If you can’t find a tech job after completing the program you receive your money back. Learn more...
+                </p>
+              </div>
+              <div className="keypoint">
+                <h4>🧱</h4>
+                <p className="bold">Learn by building</p>
+                <p>
+                  Our program focus heavily on building real tech solutions that prepare you to the real deal.
+                </p>
+              </div>
+              <div className="keypoint">
+                <h4>🔴</h4>
+                <p className="bold">Live sesions</p>
+                <p>
+                  We know it’s hard to learn by your own, you’ll have a teacher all along your course to guide you through your journey.
+                </p>
+              </div>
+              <div className="keypoint">
+                <h4>🌎</h4>
+                <p className="bold">Remote learning</p>
+                <p>
+                From your house, the beach or your favourite coffee shop, join the classes wherever you are.
+                </p>
+              </div>
+              <div className="keypoint">
+                <h4>📺</h4>
+                <p className="bold">Review your classes as much as you want</p>
+                <p>
+                  No matter if you missed a session or didn’t quite catch the lecture, you can always go back to the class recording.
+                </p>
+              </div>
+              <div className="keypoint">
+                <h4>👾</h4>
+                <p className="bold">Online Campus</p>
+                <p>
+                  We have thousands of hours of additional content and elective classes to complement your course.
+                </p>
+              </div>
+              <div className="keypoint">
+                <h4>🙋‍♀️</h4>
+                <p className="bold">Join the community</p>
+                <p>
+                  Connect with thousands of tech students in more than 30 countries.
+                </p>
+              </div>
+            </div>
+          </article>
+          
+        </section>
+      
+      </main>
+
+      <Footer></Footer>
+
     </main>
   );
 }

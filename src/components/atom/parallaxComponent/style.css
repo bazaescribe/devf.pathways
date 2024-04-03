@@ -1,0 +1,65 @@
+.parallax-container {
+  position: relative;
+  width: 100%;
+  height: 500px; /* Adjust based on your needs */
+  overflow: hidden;
+}
+
+.background, .photos, .cards {
+  will-change: transform; /* Optimizes animations */
+}
+
+@keyframes scrollBackground {
+  0% {
+    background-position: 0% 50%;
+  }
+  100% {
+    background-position: 100% 50%;
+  }
+}
+
+.background {
+  position: absolute;
+  width: 60%;
+  height: 90%;
+  top: 5%;
+  left: 10%;
+  z-index: 1;
+  opacity: 0.8;
+  background-color: #6BE990;
+  opacity: 1;
+  background-image: linear-gradient(-45deg, #7E1AFF, #7E1AFF 50%, #6BE990 50%, #6BE990);
+  background-size: 19px 19px;
+  border-radius: 16px;
+  background-size: 200% 100%; /* Makes the gradient twice as wide as the container */
+  animation: scrollBackground 16s linear alternate infinite; /* Adjust the duration as needed */
+}
+
+
+.photos {
+  position: absolute;
+  width: 50%;
+  height: 50%;
+  top: 10px;
+  left: 10px;
+  z-index: 2;
+}
+
+.photos img {
+  -webkit-filter: drop-shadow(0px 4px 32px rgba(0, 0, 0, 0.32));
+  filter: drop-shadow(0px 4px 32px rgba(0, 0, 0, 0.32));
+}
+
+
+.cards {
+  position: absolute;
+  top: 70%;
+  left: 30%;
+  z-index: 3;
+  background: rgba(0, 0, 0, 0.5);
+  backdrop-filter: blur(32px);
+  padding: 16px;
+  border-radius: 12px;
+  box-shadow: 4px 4px 32px rgba(0, 0, 0, 0.16);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+}
