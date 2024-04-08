@@ -13,22 +13,6 @@ import { useRouter } from 'next/router';
 import { useEffect, useState } from 'react';
 import { title } from 'process';
 
-const mockupData = {
-  'event1': {
-    level: 'Beginner',
-    title: 'Intro to React',
-    description: 'Learn the basics of React, from components to state management.',
-    speaker: 'John Doe',
-  },
-  'event2': {
-    level: 'Intermediate',
-    title: 'Understanding React Hooks',
-    description: 'A deep dive into React Hooks and how they can be used to simplify your code.',
-    speaker: 'Jane Doe',
-  },
-  // Add more events as needed
-};
-
 const targets = {
   'awarness': {
     description: "Sumérgete en el mundo de la tecnología con nuestro curso gratuito de computación básica. Perfecto para curiosos tecnológicos.",
@@ -38,7 +22,7 @@ const targets = {
       "Comunidad y Conexiones: Conéctate con otros apasionados por la tecnología."
     ]
   },
-  'desition': {
+  'decision': {
     description: "Descubre cómo la computación puede ser accesible y transformadora para ti con nuestro curso gratuito de computación básica.",
     keypoints: [
       "Costo Accesible: Totalmente gratuito, eliminando barreras financieras.",
@@ -83,12 +67,6 @@ const targets = {
 
 const ModuleZero = () => {
   const router = useRouter();
-  const [eventInfo, setEventInfo] = useState({
-    level: '',
-    title: '',
-    description: '',
-    speaker: '',
-  });
 
   const [courseInfo, setCourseInfo] = useState({
     title: 'Intro a la computación',
@@ -125,16 +103,23 @@ const ModuleZero = () => {
         <header className='py-800'>
 
           <div className="container row justify-content-between gap-200">
-            <div>
-              <h1>
-                Intro a la computación
-              </h1>
-              <p>
-                {courseInfo.description}
-              </p>
-              <button className="btn">
-                Inscribirme ahora
-              </button>
+            <div className='d-flex flex-direction-column gap-200'>
+              <div className="d-flex flex-direction-column">
+                <h1>
+                  Intro a la computación
+                </h1>
+                <p>
+                  {courseInfo.description}
+                </p>
+              </div>
+              
+              <div id="keypoints" className='d-flex flex-direction-column gap-075'>
+                {
+                  courseInfo.keypoints && courseInfo.keypoints.map((keypoint, index) => (
+                    <p key={index} className='caption'> ✅ {keypoint} </p>
+                  ))
+                }
+              </div>
             </div>
             <div>
               <Image src='/assets/computacion-basica.png' width={550} height={348} alt='xxxx' layout='contain'></Image>
