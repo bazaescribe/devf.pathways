@@ -15,19 +15,49 @@ import { title } from 'process';
 
 const targets = {
   'awarness': {
-    description: "Sumérgete en el mundo de la tecnología con nuestro curso gratuito de computación básica. Perfecto para curiosos tecnológicos.",
+    description: "Inicia tu viaje en el mundo de la tecnología con nuestro curso gratuito de computación básica. Inscríbete ahora.",
     keypoints: [
-      "Inicio Ideal: Explora los fundamentos de la computación en un formato amigable.",
-      "Sin Presiones: Aprende a tu propio ritmo, sin presiones ni expectativas previas.",
-      "Comunidad y Conexiones: Conéctate con otros apasionados por la tecnología."
+      "Clases remotas completamente en vivo.",
+      "Material adicional y prácticas.",
+      "Aprende a utilizar equipos de computo modernos.",
+      "Sensei experto en la materia."
+    ]
+  },
+  'consideration': {
+    description: "Acelera tu carrera en tecnología con nuestro curso gratuito de computación básica.",
+    keypoints: [
+      "Vive la experiencia dev.f sin compromisos",
+      "Curso introductorio para principiantes.",
+      "Aprende el correcto uso de una computadora antes de comenzar a programar.",
+      "Acceso libre con tu inscripción.",
+      "Puedes omitirlo y volver después si lo necesitas."
     ]
   },
   'decision': {
-    description: "Descubre cómo la computación puede ser accesible y transformadora para ti con nuestro curso gratuito de computación básica.",
+    description: "Accede al programa de computación básica sin costo alguno como beneficio de acceder a la sesión informativa.",
     keypoints: [
-      "Costo Accesible: Totalmente gratuito, eliminando barreras financieras.",
-      "Fundamentos Sólidos: Aprende a tu ritmo, construyendo una base sólida en computación.",
-      "Oportunidades Futuras: Abre puertas a nuevas oportunidades de aprendizaje y empleo."
+      "Curso introductorio para principiantes.",
+      "Aprende el correcto uso de una computadora antes de comenzar a programar.",
+      "Acceso libre con tu inscripción.",
+      "Puedes omitirlo y volver después si lo necesitas."
+    ]
+  },
+  'retention': {
+    description: "¿Tienes problemas con el código? Da un paso atrás para tomar vuelo y accede a nuestro curso introductorio a la computación sin costo adicional.",
+    keypoints: [
+      "Curso introductorio para principiantes.",
+      "Aprende el correcto uso de una computadora antes de comenzar a programar.",
+      "Acceso libre con tu inscripción.",
+      "Puedes tomar este curso y volver a tu master al concluirlo."
+    ]
+  },
+  'recovery': {
+    description: "Aprender puede ser dificil, retoma tu aprendizaje con este curso gratuito de computación básica.",
+    keypoints: [
+      "Curso introductorio para principiantes.",
+      "Aprende el correcto uso de una computadora antes de comenzar a programar.",
+      "Acceso libre con tu inscripción.",
+      "Puedes tomar este curso y volver a tu master al concluirlo."
     ]
   },
   'schoolarship': {
@@ -36,30 +66,6 @@ const targets = {
       "Sin Compromisos Financieros: Sin costo, facilitando tu participación sin estrés económico.",
       "Flexibilidad y Soporte: Contenidos adaptados a diferentes niveles, con soporte continuo.",
       "Crecimiento Personal y Profesional: Potencia tu currículum y habilidades personales."
-    ]
-  },
-  'consideration': {
-    description: "Acelera tu carrera en tecnología con nuestro curso gratuito de computación básica. Un beneficio exclusivo por asistir a nuestra charla.",
-    keypoints: [
-      "Exclusividad: Acceso prioritario como agradecimiento por tu interés y participación.",
-      "Aprendizaje Práctico: Enfoque en habilidades prácticas para aplicaciones reales desde el inicio.",
-      "Comunidad de Apoyo: Sé parte de una comunidad activa y aprovecha el networking desde el día uno."
-    ]
-  },
-  'retention': {
-    description: "¿Te sientes abrumado con los primeros pasos en codificación? Nuestro curso gratuito de computación básica está diseñado para suavizar tu camino.",
-    keypoints: [
-      "Prevención de Obstáculos: Ayuda proactiva para asegurar que los desafíos iniciales no detengan tu aprendizaje.",
-      "Aprendizaje a Tu Ritmo: Métodos de enseñanza flexibles que se adaptan a tus necesidades y ritmo de aprendizaje.",
-      "Soporte Continuo: Acceso a recursos y soporte personalizado para garantizar tu progreso y comprensión."
-    ]
-  },
-  'recovery': {
-    description: "¿Te sientes abrumado con los primeros pasos en codificación? Nuestro curso gratuito de computación básica está diseñado para suavizar tu camino.",
-    keypoints: [
-      "Prevención de Obstáculos: Ayuda proactiva para asegurar que los desafíos iniciales no detengan tu aprendizaje.",
-      "Aprendizaje a Tu Ritmo: Métodos de enseñanza flexibles que se adaptan a tus necesidades y ritmo de aprendizaje.",
-      "Soporte Continuo: Acceso a recursos y soporte personalizado para garantizar tu progreso y comprensión."
     ]
   }
 };
@@ -95,7 +101,7 @@ const ModuleZero = () => {
   return (
     <>
       <div className="ribbon">
-        ⭐️ Curso gratuito ⭐️
+        Lugares limitados
       </div>
       <main>
         <Navbar></Navbar>
@@ -105,6 +111,9 @@ const ModuleZero = () => {
           <div className="container row justify-content-between gap-200">
             <div className='d-flex flex-direction-column gap-200'>
               <div className="d-flex flex-direction-column">
+                <p className="chirp">
+                  Curso gratuito
+                </p>
                 <h1>
                   Intro a la computación
                 </h1>
@@ -120,6 +129,9 @@ const ModuleZero = () => {
                   ))
                 }
               </div>
+              <h3>
+                $0.00
+              </h3>
             </div>
             <div>
               <Image src='/assets/computacion-basica.png' width={550} height={348} alt='xxxx' layout='contain'></Image>
